@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="description" content="MinTab: an elegant, minimal startpage">
     <meta name="author" content"github.com/lr-tech">
-    <title>mintab</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <title>MinTab</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link
       rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       as="font"
       crossorigin="anonymous"
-      type="font/otf"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      />
+      type="font/woff2"
+    />
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="container bigContainer" id="mainContainer">
+    <div id="topContainer" class="container bigContainer"></div>
+    <div id="middleContainer" class="container bigContainer">
       <div class="container" id="iconsContainer"></div>
       <div class="container" id="infoContainer">
         <p id="currentTime">00:00</p>
         <p id="currentDate">Monday, January 01</p>
-        <p id="quote">MinTab is an elegant, minimal startpage</p>
-        <p id="quoteAuthor">--lr-tech</p>
+        <p id="quote">“Always focus on how far you've come, not how far you have to go.”</p>
+        <p id="quoteAuthor">- Anonymous</p>
       </div>
     </div>
-    <div class="container bigContainer" id="listContainer"></div>
+    <div id="bottomContainer" class="container bigContainer">
+      <div id="listContainer" class="container"></div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

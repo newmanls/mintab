@@ -4,10 +4,6 @@ const ICONS = [
     link: "https://www.youtube.com/"
   },
   {
-    icon: "ri-play-circle-fill",
-    link: "https://music.youtube.com/"
-  },
-  {
     icon: "ri-whatsapp-fill",
     link: "https://web.whatsapp.com/"
   },
@@ -18,10 +14,14 @@ const ICONS = [
   {
     icon: "ri-github-fill",
     link: "https://www.github.com/"
-  },
+  }
 ]
 
 const LIST_ITEMS = [
+  {
+    name: "music",
+    link: "https://music.youtube.com"
+  },
   {
     name: "netflix",
     link: "https://www.netflix.com/"
@@ -101,11 +101,12 @@ const formatDigit = (digit) => {
 const printIcons = () => {
   for (const card of ICONS) {
     let currentItem = document.createElement("a");
-    let currentItemIcon = document.createElement("i");
+    let currentItemIcon = document.createElement("span");
 
     currentItem.classList.add("icon");
     currentItem.href = card.link;
 
+    currentItemIcon.classList.add("fas");
     currentItemIcon.classList.add(card.icon);
 
     currentItem.append(currentItemIcon);

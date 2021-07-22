@@ -3,9 +3,7 @@
   --bgColor   : #212121;
 }
 
-*,
-*::before,
-*::after {
+* {
   margin          : 0;
   padding         : 0;
   outline         : none;
@@ -42,7 +40,7 @@ body {
   padding         : 48px 92px;
 }
 
-#mainContainer {
+#middleContainer {
   flex-flow       : row wrap;
   height          : 100%;
 }
@@ -80,6 +78,9 @@ body {
 
 #quote {
   margin-bottom   : 8px;
+} 
+#quoteAuthor {
+  opacity         : 50%;
 }
 
 #listContainer {
