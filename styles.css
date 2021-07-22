@@ -1,0 +1,100 @@
+:root {
+  --fgColor   : #eeffff;
+  --bgColor   : #212121;
+}
+
+*,
+*::before,
+*::after {
+  margin          : 0;
+  padding         : 0;
+  outline         : none;
+
+  font-family     : Roboto, "DejaVu Sans", sans-serif;
+  text-decoration : none;
+
+  transition      : 0.2s ease-in-out;
+}
+
+a {
+  color           : inherit;
+}
+
+body {
+  color           : var(--fgColor);
+  background      : var(--bgColor) url("bg.jpg");
+  background-size : cover;
+  font-size       : 16px;
+
+  height          : 100vh;
+  width           : 100vw;
+
+  display         : flex;
+  flex-flow       : column;
+  justify-content : space-between;
+}
+
+.container {
+  display         : flex;
+}
+
+.bigContainer {
+  padding         : 48px 92px;
+}
+
+#mainContainer {
+  flex-flow       : row wrap;
+  height          : 100%;
+}
+
+#iconsContainer {
+  flex-flow       : column;
+  justify-content : center;
+  align-items     : center;
+}
+
+.icon {
+  margin          : 8px;
+  margin-right    : 48px;
+  opacity         : 50%;
+  font-size       : 1.5rem;
+}
+
+#infoContainer {
+  flex-flow       : column;
+  align-items     : start;
+  justify-content : center;
+  max-width       : 480px;
+}
+
+#currentTime {
+  font-size       : 5rem;
+  font-weight     : 700;
+  margin-top      : -16px;
+}
+
+#currentDate {
+  font-size       : 1.5rem;
+  margin-bottom   : 16px;
+}
+
+#quote {
+  margin-bottom   : 8px;
+}
+
+#listContainer {
+  flex-flow       : row wrap;
+}
+
+.listItem {
+  font-size       : 1.1rem;
+  opacity         : 50%;
+  margin-right    : 24px;
+}
+
+.icon:hover,
+.icon:focus,
+.listItem:hover,
+.listItem:focus {
+  opacity         : 100%;
+}
