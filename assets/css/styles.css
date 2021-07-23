@@ -20,7 +20,7 @@ a {
 
 body {
   color           : var(--fgColor);
-  background      : var(--bgColor) url("bg.jpg");
+  background      : var(--bgColor) url("../../bg.jpg");
   background-size : cover;
   font-size       : 16px;
 
@@ -76,6 +76,7 @@ body {
 }
 
 #quote {
+  font-style      : italic;
   margin-bottom   : 8px;
 } 
 #quoteAuthor {
