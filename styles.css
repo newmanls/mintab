@@ -41,8 +41,7 @@ body {
 }
 
 #middleContainer {
-  flex-flow       : row wrap;
-  height          : 100%;
+  flex-flow       : row nowrap;
 }
 
 #iconsContainer {
@@ -52,10 +51,10 @@ body {
 }
 
 .icon {
-  margin          : 8px;
+  margin          : 4px;
   margin-right    : 48px;
   opacity         : 50%;
-  font-size       : 1.5rem;
+  font-size       : 2rem;
 }
 
 #infoContainer {
@@ -98,4 +97,41 @@ body {
 .listItem:hover,
 .listItem:focus {
   opacity         : 100%;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    justify-content : flex-start;
+  }
+
+  .bigContainer {
+    padding         : 24px 48px;
+  }
+
+  #middleContainer {
+    flex-flow       : column wrap;
+  }
+  
+  #iconsContainer {
+    flex-flow       : row wrap;
+    justify-content : flex-start;
+    align-items     : flex-start;
+  }
+
+  .icon {
+    margin          : 16px;
+  }
+  
+  .icon:last-of-type {
+    margin-bottom   : 48px;
+  }
+
+  #listContainer {
+    flex-flow       : column nowrap;
+  }
+
+  .listItem {
+    margin          : 0;
+    margin-bottom   : 16px;
+  }
 }
