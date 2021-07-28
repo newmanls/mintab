@@ -14,15 +14,14 @@
   transition      : 0.2s ease-in-out;
 }
 
-a {
-  color           : inherit;
+html {
+  font-size       : 16px;
 }
 
 body {
   color           : var(--fgColor);
   background      : var(--bgColor) url("../../bg.jpg");
   background-size : cover;
-  font-size       : 16px;
 
   height          : 100vh;
   width           : 100vw;
@@ -30,6 +29,10 @@ body {
   display         : flex;
   flex-flow       : column;
   justify-content : space-between;
+}
+
+a {
+  color           : inherit;
 }
 
 .container {
@@ -100,7 +103,10 @@ body {
   opacity         : 100%;
 }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 30rem) {
+  html {
+    font-size       : 16px;
+  }
   body {
     justify-content : flex-start;
   }
