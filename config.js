@@ -1,3 +1,7 @@
+const CONFIG = {
+  show12h: false,
+}
+
 const ICONS = [
   {
     icon: "ri-youtube-fill",

@@ -1,17 +1,27 @@
+
+/* C U S T O M I Z A T I O N */
+
 :root {
-  --fgColor   : #eeffff;
-  --bgColor   : #212121;
+  --fgColor   : #ffffff; /* foreground color */
+  --bgColor   : #212121; /* background color */
+  --bgFilter  : rgba(0, 0, 0, 0.1); /* background image filter */
+  --font      : "Roboto"; /* custom font */
+
+  --animationSpeed  : 0.2s; /* speed for animations when hovering/resizing */
 }
+
+
+/*============================================================================*/
 
 * {
   margin          : 0;
   padding         : 0;
   outline         : none;
 
-  font-family     : Roboto, "DejaVu Sans", sans-serif;
+  font-family     : var(--font), Roboto, "DejaVu Sans", sans-serif;
   text-decoration : none;
 
-  transition      : 0.2s ease-in-out;
+  transition      : ease-in-out var(--animationSpeed);
 }
 
 html {
@@ -20,7 +30,9 @@ html {
 
 body {
   color           : var(--fgColor);
-  background      : var(--bgColor) url("../../bg.jpg");
+  background      : var(--bgColor);
+  background      : linear-gradient(var(--bgFilter), var(--bgFilter)),
+                    url("bg.jpg");
   background-size : cover;
 
   height          : 100vh;

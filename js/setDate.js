@@ -24,27 +24,24 @@ const MONTHS = [
 ];
 
 const updateDate = () => {
-  // Create a new Date object and get the complete Date/Time information
   const completeDate = new Date();
 
-  // Time Variables
   let currentHour = formatDigit(completeDate.getHours());
   let currentMinute = formatDigit(completeDate.getMinutes());
 
-  // Date Variables
   let currentDay = completeDate.getDay();
   let currentNumber = completeDate.getDate();
   let currentMonth = completeDate.getMonth();
 
-  // Update the Time
-  /*
-  currentTime.innerHTML = `${
-    currentHour % 12 == 0 ? "12" : currentHour % 12
-  }:${currentMinute} ${currentHour > 11 ? "PM" : "AM"}`;
-  */
-  currentTime.innerHTML = `${currentHour}:${currentMinute}`;
+  if (CONFIG.show12h) {
+    currentTime.innerHTML = `${
+      currentHour % 12 == 0 ? "12" : currentHour % 12
+    }:${currentMinute}<span id="ampm"></span>`;
+    ampm.innerHTML = currentHour > 11 ? "pm" : "am";
+  } else {
+    currentTime.innerHTML = `${currentHour}:${currentMinute}`;
+  }
 
-  // Update the Date
   currentDate.innerHTML = `${DAYS[currentDay]},
     ${MONTHS[currentMonth]} ${currentNumber}`;
 
