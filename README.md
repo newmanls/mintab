@@ -82,11 +82,10 @@ You can copy this format and add as many links as you want.
 
 ### Clock
 
-You can set hour format for 24 or 12 hour clock in the `config.js` file. Just set `hour12` to `true` or `false`. Also, change `locale` variable according to your language (this only affects time and date, not quotes):
+You can set hour format for 24 or 12 hour clock in the `config.js` file. Just set `hour12` to `true` or `false`:
 
 ```javascript
 const CONFIG = {
-  locale  : "en-US",
   hour12  : false
 }
 ```

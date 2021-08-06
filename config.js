@@ -1,5 +1,4 @@
 const CONFIG = {
-  locale  : "en-US",
   hour12  : false
 }
 
