@@ -108,3 +108,10 @@ You can change colors, font and animation speed at the top of the `styles.css` f
 ```
 
 Also, you can change the background image by overwriting the `bg.jpg` file.
+
+
+## Thanks to
+
+- [imreyesjorge/root-startpage](https://github.com/imreyesjorge/root-startpage): A simple and clean startpage.
+- [migueravila/Bento](https://github.com/migueravila/Bento): Minimalist, elegant and simple startpage inspired by the Bento box!.
+- [Teiem1](https://www.reddit.com/user/Teiem1/): [r/startpages](https://www.reddit.com/r/startpages/) moderator.
