@@ -17,6 +17,8 @@ const updateDate = () => {
 
   currentTime.innerHTML = timeFormat;
   currentDate.innerHTML = dateFormat;
+
+  setTimeout(updateDate, 1000);
 }
 
-setInterval(updateDate, 1000);
+updateDate();

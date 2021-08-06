@@ -30,8 +30,8 @@ html {
 
 body {
   color           : var(--fgColor);
-  background      : var(--bgColor);
-  background      : linear-gradient(var(--bgFilter), var(--bgFilter)),
+  background-color: var(--bgColor);
+  background-image: linear-gradient(var(--bgFilter), var(--bgFilter)),
                     url("bg.jpg");
   background-size : cover;
 
