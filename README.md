@@ -114,4 +114,5 @@ Also, you can change the background image by overwriting the `bg.jpg` file.
 
 - [imreyesjorge/root-startpage](https://github.com/imreyesjorge/root-startpage): A simple and clean startpage.
 - [migueravila/Bento](https://github.com/migueravila/Bento): Minimalist, elegant and simple startpage inspired by the Bento box!.
-- [Teiem1](https://www.reddit.com/user/Teiem1/): [r/startpages](https://www.reddit.com/r/startpages/) moderator.
+- [teiem1](https://www.reddit.com/user/Teiem1/): [r/startpages](https://www.reddit.com/r/startpages/) moderator.
+- [ratabb](https://github.com/ratabb): for implementing a quotes api.
