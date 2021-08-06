@@ -13,7 +13,6 @@ _A minimal, elegant, easy to configure startpage._
 - New quotes everytime you open a new tab.
 - Full icons support from [Remix Icon](https://remixicon.com/).
 
-
 ## Usage
 
 #### As Home Page:
@@ -83,11 +82,12 @@ You can copy this format and add as many links as you want.
 
 ### Clock
 
-Also, you can set hour format for 24 or 12 hour clock in the `config.js` file. Just set `show12h` to `true` or `false`:
+You can set hour format for 24 or 12 hour clock in the `config.js` file. Just set `hour12` to `true` or `false`. Also, change `locale` variable according to your language (this only affects time and date, not quotes):
 
 ```javascript
 const CONFIG = {
-  show12h: false,
+  locale  : "en-US",
+  hour12  : false
 }
 ```
 

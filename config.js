@@ -1,5 +1,6 @@
 const CONFIG = {
-  show12h: false,
+  locale  : "en-US",
+  hour12  : false
 }
 
 const ICONS = [

@@ -6574,10 +6574,11 @@ const QUOTES = [
 ];
 
 const printQuote = () => {
-  var currentQuote = Math.floor(Math.random() * QUOTES.length);
+  const { text, author } = QUOTES[Math.floor(Math.random() * QUOTES.length)];
 
-  quote.innerHTML = `"${QUOTES[currentQuote].text}"`;
-  quoteAuthor.innerHTML = `- ${QUOTES[currentQuote].author}`;
+  quote.innerHTML = `"${ text }"`;
+  if (author != null) quoteAuthor.innerHTML = `- ${ author }`;
+  
 };
 
 printQuote();
