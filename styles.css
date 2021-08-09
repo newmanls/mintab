@@ -32,7 +32,7 @@ body {
   color           : var(--fgColor);
   background-color: var(--bgColor);
   background-image: linear-gradient(var(--bgFilter), var(--bgFilter)),
-                    url("bg.jpg");
+                    url("bw-sun.jpg");
   background-size : cover;
 
   height          : 100vh;

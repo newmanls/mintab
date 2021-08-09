@@ -1,5 +1,5 @@
 const CONFIG = {
-  hour12  : false
+  hour12  : true
 }
 
 const ICONS = [
@@ -8,12 +8,12 @@ const ICONS = [
     link: "https://www.youtube.com/"
   },
   {
-    icon: "ri-whatsapp-fill",
-    link: "https://web.whatsapp.com/"
+    icon: "ri-instagram-fill",
+    link: "https://www.instagram.com/"
   },
   {
-    icon: "ri-reddit-fill",
-    link: "https://www.reddit.com/"
+    icon: "ri-twitter-fill",
+    link: "https://www.twitter.com/"
   },
   {
     icon: "ri-github-fill",
@@ -23,19 +23,23 @@ const ICONS = [
 
 const LIST_ITEMS = [
   {
-    name: "music",
-    link: "https://music.youtube.com"
+    name: "gmail",
+    link: "https://www.gmail.com/"
   },
   {
-    name: "netflix",
-    link: "https://www.netflix.com/"
+    name: "organizr",
+    link: "https://organizr.stephenwarner.net"
   },
   {
-    name: "r/unixporn",
-    link: "https://www.reddit.com/r/unixporn/"
+    name: "guacamole",
+    link: "https://guacamole.stephenwarner.net"
   },
   {
-    name: "r/firefoxcss",
-    link: "https://www.reddit.com/r/firefoxcss/"
+    name: "plex",
+    link: "https://plex.stephenwarner.net"
+  },
+  {
+    name: "pi-hole",
+    link: "http://192.168.1.111/admin/"
   },
 ]
