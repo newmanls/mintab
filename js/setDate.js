@@ -1,26 +1,25 @@
-const updateDate = () => {
-  const completeDate = new Date();
-  const userLang = navigator.language || navigator.userLanguage;
+const completeDate = new Date();
+const userLang = (navigator.language || navigator.userLanguage) ?? "en-US";
 
-  const timeOptions = {
+const getDateTime = (format) => {
+  let dateTime = new Intl.DateTimeFormat(userLang, format).format(completeDate);
+  return dateTime;
+}
+
+const updateDateTime = () => {
+  currentTime.innerHTML = getDateTime({
     hour    : "numeric",
     minute  : "numeric",
     hour12  : CONFIG.hour12
-  }
-  const timeFormat = 
-    new Intl.DateTimeFormat(userLang ?? "en-US", timeOptions).format(completeDate);
-  const dateOptions = {
+  });
+
+  currentDate.innerHTML = getDateTime({
     weekday : "long",
     month   : "long",
     day     : "numeric"
-  }
-  const dateFormat = 
-    new Intl.DateTimeFormat(userLang ?? "en-US", dateOptions).format(completeDate);
+  });
 
-  currentTime.innerHTML = timeFormat;
-  currentDate.innerHTML = dateFormat;
-
-  setTimeout(updateDate, 1000);
+  setTimeout(updateDateTime, 1000);
 }
 
-updateDate();
+updateDateTime();
