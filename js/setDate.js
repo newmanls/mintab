@@ -1,7 +1,7 @@
-const completeDate = new Date();
 const userLang = (navigator.language || navigator.userLanguage) ?? "en-US";
 
 const getDateTime = (format) => {
+  let completeDate = new Date();
   let dateTime = new Intl.DateTimeFormat(userLang, format).format(completeDate);
   return dateTime;
 }
