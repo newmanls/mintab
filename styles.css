@@ -123,7 +123,6 @@ body.dark {
     flex-flow: column;
     align-items: start;
     justify-content: center;
-    max-width: 30rem;
 }
 
 #currentTime {
@@ -139,6 +138,7 @@ body.dark {
 #quote {
     font-style: italic;
     margin-top: 1rem;
+    max-width: 30rem;
 }
 #quoteAuthor {
     margin-top: 0.5rem;
