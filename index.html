@@ -10,19 +10,44 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script defer src="app.js"></script>
   </head>
-  <body>
-    <div id="topContainer" class="container bigContainer"></div>
-    <div id="middleContainer" class="container bigContainer">
-      <div class="container" id="iconsContainer"></div>
-      <div class="container" id="infoContainer">
+  <body id='body'>
+    <div id="mainBox">
+      <div id="linksIconicBox"></div>
+      <div id="infoBox">
         <p id="currentTime"></p>
         <p id="currentDate"></p>
         <p id="quote"></p>
         <p id="quoteAuthor"></p>
       </div>
     </div>
-    <div id="bottomContainer" class="container bigContainer">
-      <div id="listContainer" class="container"></div>
+    <div id="linksLabeledBox"></div>
+    <i id="settingsIcon" class="icon ri-settings-3-fill" onclick="openSettingsBox()"></i>
+    <div id="settingsBox">
+      <div id="settingsHeader">
+        <i class="icon button ri-arrow-left-s-line" onclick="cancelSettings()"></i>
+        <span id="settingsBoxTitle">Settings</span>
+        <i class="icon button ri-check-line" onclick="saveSettings()"></i>
+      </div>
+      <form id="settingsForm">
+        <fieldset id="checkboxFieldset">
+          <div class="fieldsetCheckboxBox">
+            <input id="clock12hCheckbox" type="checkbox" name="clock12hCheckbox">
+            <label for="clock12hCheckbox">12 hours clock format</label>
+          </div>
+          <div class="fieldsetCheckboxBox">
+            <input id="quotesCheckbox" type="checkbox" name="quotesCheckbox">
+            <label for="quotesCheckbox">Enable quotes</label>
+          </div>
+          <div class="fieldsetCheckboxBox">
+            <input id="darkThemeCheckbox" type="checkbox" name="darkThemeCheckbox">
+            <label for="darkThemeCheckbox">Dark theme</label>
+          </div>
+        </fieldset>
+        <fieldset id="linksIconicFieldset"><legend>Icons</legend></fieldset>
+        <i class="button addButton ri-add-line" onclick="addEmptyLinkIconic()"></i>
+        <fieldset id="linksLabeledFieldset"><legend>Labels</legend></fieldset>
+        <i class="button addButton ri-add-line" onclick="addEmptyLinkLabeled()"></i>
+      </form>
     </div>
   </body>
 </html>

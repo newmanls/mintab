@@ -1,113 +1,70 @@
-# MinTab
+# mintab
 
 _A minimal, elegant, easy to configure startpage._
 
-![MinTab screenshot](screenshot.png)
-
+| Dark | Light |
+| ---  | ---   |
+| ![Main page (dark)](img/main_dark.png) | ![Main page (light)](img/main_light.png) |
+| ![Settings window (dark)](img/settings_dark.png) | ![settings window (light)](img/settings_light.png) |
 
 ## Features
 
 - Themeable.
-- Easy to configure.
-- Time format can be set to 24 or 12 hours (24h is default).
+- User friendly settings window.
+- Time format can be set to 24 or 12 hours.
 - New quotes everytime you open a new tab.
 - Full icons support from [Remix Icon](https://remixicon.com/).
 
 ## Usage
 
-#### As Home Page:
+### As Home Page
 
-1. Fork this repo.
-2. Enable the Github Pages service `Settings > GitHub Pages > Source [master branch] > Save`.
-3. Set it as Home Page:
-   - Click the menu button. and select `Options`. `Preferences`.
-   - Click the Home panel.
-   - Click the menu next to Homepage and new windows and choose to show custom URLs and add your `Github Pages link`
+Simply set `https://newmanls.github.io/mintab/` as your home page URL.
 
-#### As New Tab:
+### As New Tab
 
-You can use different Add-ons/Extensions for it
+You can use different Add-ons/Extensions for it:
 
-- If you use Firefox: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search)
-- If you use Chromium (Brave, Vivaldi, Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
+- On Firefox: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search)
+- On Chromium-based browsers (Google Chrome, Brave, etc.): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
 
 
 ## Customization
 
-### Links
+**mintab** is easily customizable. Just open the settings window by clicking the cog icon on the top-left corner. There you can change settings such as:
 
-You can change icons and list links in the `config.js` file. Just select an icon from [Remix Icon](https://remixicon.com/) or a name, and a link: 
+- Clock format (12/24 hours)
+- Enable/disable quotes
+- Enable/disable dark theme
+- Add and remove iconic and labeled links
 
-```javascript
-const ICONS = [
-  {
-    icon: "ri-youtube-fill",
-    link: "https://www.youtube.com/"
-  },
-  {
-    icon: "ri-whatsapp-fill",
-    link: "https://web.whatsapp.com/"
-  },
-  {
-    icon: "ri-reddit-fill",
-    link: "https://www.reddit.com/"
-  },
-  {
-    icon: "ri-github-fill",
-    link: "https://www.github.com/"
-  }
-]
+### Adding iconic links
 
-const LIST_ITEMS = [
-  {
-    name: "music",
-    link: "https://music.youtube.com"
-  },
-  {
-    name: "netflix",
-    link: "https://www.netflix.com/"
-  },
-  {
-    name: "r/unixporn",
-    link: "https://www.reddit.com/r/unixporn/"
-  },
-  {
-    name: "r/firefoxcss",
-    link: "https://www.reddit.com/r/firefoxcss/"
-  },
-]
-```
+In order to add iconic links, you have to find the icon class name you want from the [Remix Icon website](https://remixicon.com/) (i.e.: `ri-github-fill`) and paste it on the `Icon` field.
 
-You can copy this format and add as many links as you want.
+### Additional theming
 
-### Clock
-
-You can set hour format for 24 or 12 hour clock in the `config.js` file. Just set `hour12` to `true` or `false`:
-
-```javascript
-const CONFIG = {
-  hour12  : false
-}
-```
-
-
-### Theme
-
-You can change colors, font and animation speed at the top of the `styles.css` file:
+For more in-depth customizacion, theme colors and font can be modified at the top of the `styles.css` file:
 
 ```css
 :root {
-  --fgColor   : #ffffff; /* foreground color */
-  --bgColor   : #212121; /* background color */
-  --bgFilter  : rgba(0, 0, 0, 0.1); /* background image filter */
-  --font      : "Roboto"; /* custom font */
+    --font: 'Open Sans';
 
-  --animationSpeed  : 0.2s; /* speed for animations when hovering/resizing */
+    --bg0-light: #f9f9f9;
+    --bg1-light: #f9f9f9;
+    --bg2-light: #dcdcdc;
+    --fg0-light: #000000;
+    --fg1-light: #b9b9b9;
+    --accent-light: #8ab4f8;
+
+    --bg0-dark: #121212;
+    --bg1-dark: #1e1e1e;
+    --bg2-dark: #2e2e2e;
+    --fg0-dark: #ffffff;
+    --fg1-dark: #6f6f6f;
+    --accent-dark: #8ab4f8;
 }
 ```
-
-Also, you can change the background image by overwriting the `bg.jpg` file.
-
 
 ## Thanks to
 

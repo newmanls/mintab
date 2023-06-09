@@ -1,156 +1,257 @@
-
-/* C U S T O M I Z A T I O N */
-
 :root {
-  --fgColor   : #ffffff; /* foreground color */
-  --bgColor   : #212121; /* background color */
-  --bgFilter  : rgba(0, 0, 0, 0.1); /* background image filter */
-  --font      : "Roboto"; /* custom font */
+    --font: 'Open Sans';
 
-  --animationSpeed  : 0.2s; /* speed for animations when hovering/resizing */
+    --bg0-light: #f9f9f9;
+    --bg1-light: #f9f9f9;
+    --bg2-light: #dcdcdc;
+    --fg0-light: #000000;
+    --fg1-light: #b9b9b9;
+    --accent-light: #8ab4f8;
+
+    --bg0-dark: #121212;
+    --bg1-dark: #1e1e1e;
+    --bg2-dark: #2e2e2e;
+    --fg0-dark: #ffffff;
+    --fg1-dark: #6f6f6f;
+    --accent-dark: #8ab4f8;
 }
-
-
-/*============================================================================*/
 
 * {
-  margin          : 0;
-  padding         : 0;
-  outline         : none;
-
-  font-family     : var(--font), Roboto, "DejaVu Sans", sans-serif;
-  text-decoration : none;
-
-  transition      : ease-in-out var(--animationSpeed);
-}
-
-html {
-  font-size       : 16px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: var(--font), Roboto, 'DejaVu Sans', Arial, Verdana, sans-serif;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    box-sizing: border-box;
+    transition: ease-in-out 200ms;
 }
 
 body {
-  color           : var(--fgColor);
-  background-color: var(--bgColor);
-  background-image: linear-gradient(var(--bgFilter), var(--bgFilter)),
-                    url("bg.jpg");
-  background-size : cover;
+    --bg0: var(--bg0-light);
+    --bg1: var(--bg1-light);
+    --bg2: var(--bg2-light);
+    --fg0: var(--fg0-light);
+    --fg1: var(--fg1-light);
+    --accent: var(--accent-light);
 
-  height          : 100vh;
-  width           : 100vw;
-
-  display         : flex;
-  flex-flow       : column;
-  justify-content : space-between;
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+    color: var(--fg0);
+    background-color: var(--bg0);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
-a {
-  color           : inherit;
+body.dark {
+    --bg0: var(--bg0-dark);
+    --bg1: var(--bg1-dark);
+    --bg2: var(--bg2-dark);
+    --fg0: var(--fg0-dark);
+    --fg1: var(--fg1-dark);
+    --accent: var(--accent-dark);
 }
 
-.container {
-  display         : flex;
+.button {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
-.bigContainer {
-  padding         : 48px 92px;
+.button:hover {
+    background: var(--bg2);
 }
 
-#middleContainer {
-  flex-flow       : row nowrap;
-}
-
-#iconsContainer {
-  flex-flow       : column;
-  justify-content : center;
-  align-items     : center;
+.redButton:hover {
+    color: #ff0000 !important;
+    background: #ff000020 !important;
 }
 
 .icon {
-  margin          : 4px;
-  margin-right    : 48px;
-  opacity         : 50%;
-  font-size       : 2rem;
+    font-size: 2rem;
+    opacity: 50%;
+    cursor: pointer;
 }
 
-#infoContainer {
-  flex-flow       : column;
-  align-items     : start;
-  justify-content : center;
-  max-width       : 480px;
+.linkLabeled {
+    font-size: 1.1rem;
+    opacity: 50%;
 }
 
-#currentTime {
-  font-size       : 5rem;
-  font-weight     : 700;
-  margin-top      : -16px;
-}
-
-#currentDate {
-  font-size       : 1.5rem;
-  margin-bottom   : 16px;
-}
-
-#quote {
-  font-style      : italic;
-  margin-bottom   : 8px;
-} 
-#quoteAuthor {
-  opacity         : 50%;
-}
-
-#listContainer {
-  flex-flow       : row wrap;
-}
-
-.listItem {
-  font-size       : 1.1rem;
-  opacity         : 50%;
-  margin-right    : 24px;
+.linkLabeled:not(:last-of-type) {
+    margin-right: 1.5rem;
 }
 
 .icon:hover,
 .icon:focus,
-.listItem:hover,
-.listItem:focus {
-  opacity         : 100%;
+.linkLabeled:hover,
+.linkLabeled:focus {
+    opacity: 100%;
 }
 
-@media only screen and (max-width: 30rem) {
-  html {
-    font-size       : 16px;
-  }
-  body {
-    justify-content : flex-start;
-  }
+#mainBox {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto 6rem;
+    padding-top: 3rem;
+}
 
-  .bigContainer {
-    padding         : 24px 48px;
-  }
+#linksLabeledBox {
+    display: flex;
+    margin: 3rem 6rem;
+}
 
-  #middleContainer {
-    flex-flow       : column wrap;
-  }
-  
-  #iconsContainer {
-    flex-flow       : row wrap;
-    justify-content : flex-start;
-    align-items     : flex-start;
-  }
+#linksIconicBox {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
 
-  .icon {
-    margin          : 16px;
-  }
-  
-  .icon:last-of-type {
-    margin-bottom   : 48px;
-  }
+#linksIconicBox > .icon {
+    margin: 0.5rem 2rem 0.5rem 0;
+}
 
-  #listContainer {
-    flex-flow       : column nowrap;
-  }
+#infoBox {
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    max-width: 30rem;
+}
 
-  .listItem {
-    margin          : 0;
-    margin-bottom   : 16px;
-  }
+#currentTime {
+    margin-top: -1.5rem;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+#currentDate {
+    font-size: 1.5rem;
+}
+
+#quote {
+    font-style: italic;
+    margin-top: 1rem;
+}
+#quoteAuthor {
+    margin-top: 0.5rem;
+    opacity: 50%;
+}
+
+#settingsIcon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    margin: 0.5rem;
+}
+
+#settingsBox {
+    height: 100vh;
+    width: 0;
+    max-width: 30rem;
+    position: fixed;
+    right: 0;
+    z-index: 1001;
+    background: var(--bg1);
+    border-left: 1px solid var(--bg2);
+    box-shadow: 0 0 3rem -2rem black;
+}
+
+#settingsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--bg2);
+}
+
+#settingsHeader > span {
+    font-size: 1.25rem;
+}
+
+#settingsHeader > .icon {
+    font-size: 2rem;
+}
+
+#settingsForm {
+    height: 100%;
+    padding: 1.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#settingsForm > .addButton {
+    width: 100%;
+    height: 2rem;
+    border-radius: 1rem;
+    margin-top: -0.5rem;
+}
+
+#settingsForm > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+#settingsForm fieldset {
+    width: 100%;
+}
+
+fieldset > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+input, select {
+    background: var(--bg2);
+    color: var(--fg0);
+    height: 2rem;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+}
+
+input:focus, select:focus {
+    border: 2px solid var(--accent);
+}
+
+.fieldsetCheckboxBox {
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.fieldsetCheckboxBox > input {
+    margin-right: 0.5rem;
+}
+
+.fieldsetLinkBox {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.fieldsetLinkBox > input {
+    width: calc((100% - 2rem) / 2);
+    height: 2rem;
+    margin-right: 0.25rem;
+}
+
+.fieldsetLinkBox > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.25rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.fieldsetLinkBox > i:hover {
+    background: var(--bg2);
 }
